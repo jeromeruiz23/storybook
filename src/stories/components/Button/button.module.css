@@ -1,0 +1,81 @@
+:root {
+  /* Light theme defaults */
+  --primary-color: #007AFF;
+  --primary-hover: #0A84FF;
+  --background: #ffffff;
+  --text-color: #333333;
+  --disabled-bg: #dddddd;
+  --disabled-text: #aaaaaa;
+}
+
+[data-theme="dark"] {
+  /* Dark theme overrides */
+  --primary-color: #0A84FF;
+  --primary-hover: #1B8CFF;
+  --background: #1a1a1a;
+  --text-color: #ffffff;
+  --disabled-bg: #333333;
+  --disabled-text: #666666;
+}
+
+.storybook-button {
+  display: inline-block;
+  border: 0;
+  border-radius: 14px;
+  font-weight: 700;
+  line-height: 1;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/* Primary variant */
+.storybook-button--primary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 14px 28px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.storybook-button--primary:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.04);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.storybook-button--primary:active {
+  transform: scale(0.96);
+}
+
+/* Secondary variant */
+.storybook-button--secondary {
+  background-color: transparent;
+  color: var(--text-color);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+
+/* Sizes */
+.storybook-button--small {
+  padding: 10px 16px;
+  font-size: 12px;
+}
+
+.storybook-button--medium {
+  padding: 11px 20px;
+  font-size: 14px;
+}
+
+.storybook-button--large {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+/* Disabled state */
+.storybook-button--disabled {
+  background-color: var(--disabled-bg) !important;
+  color: var(--disabled-text) !important;
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none !important;
+  box-shadow: none !important;
+}

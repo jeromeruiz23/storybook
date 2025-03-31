@@ -66,3 +66,30 @@
 .storybook-page .tip-wrapper svg path {
   fill: #1ea7fd;
 }
+
+/* Light mode styles */
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.theme-toggle:hover {
+  background-color: #0056b3;
+}

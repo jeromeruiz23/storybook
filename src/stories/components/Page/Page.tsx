@@ -9,15 +9,24 @@ type User = {
 
 export const Page: React.FC = () => {
   const [user, setUser] = React.useState<User>();
+  const [isDarkMode, setIsDarkMode] = React.useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+  };
 
   return (
-    <article>
+    <article className={isDarkMode ? 'dark-mode' : 'light-mode'}>
       <Header
         user={user}
         onLogin={() => setUser({ name: 'Jane Doe' })}
         onLogout={() => setUser(undefined)}
         onCreateAccount={() => setUser({ name: 'Jane Doe' })}
       />
+
+      <button onClick={toggleTheme} className="theme-toggle">
+        Switch to {isDarkMode ? 'Light' : 'Dark'} Mode
+      </button>
 
       <section className="storybook-page">
         <h2>Pages in Storybook</h2>
